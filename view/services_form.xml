@@ -1,0 +1,13 @@
+<form>
+    <label name='name'/>
+    <field name='name'/>
+    <label name='payment'/>
+    <field name='payment'/>
+    <label name='refund'/>
+    <field name='refund'/>
+    <label name='indebt'/>
+    <field name='indebt'/>
+    <label name='total'/>
+    <field name='total'/>
+    <field name='service_line' colspan='4'/>
+</form>

@@ -1,0 +1,10 @@
+<tree>
+    <field name = 'room' expand='1'/>
+    <field name = 'reserved_by' expand='1'/>
+    <field name="check_in" string=" Check In Date" widget="date"/>
+    <field name="check_in" string="Check In Time" widget="time"/>
+    <field name="check_out" string=" Check Out Date" widget="date"/>
+    <field name="check_out" string="Check Out Time" widget="time"/>
+    <field name="price"/>
+    <field name="total_reservation"/>
+</tree>

@@ -1,0 +1,6 @@
+<tree editable='1'> 
+    <field name='product' expand='1'/>
+    <field name='qty'/>
+    <field name='unit_price'/>
+    <field name='price'/>
+</tree>

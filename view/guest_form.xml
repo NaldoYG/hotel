@@ -1,0 +1,18 @@
+<form>
+    <group col='10' id='guest'>
+        <label name='guest'/>
+        <field name='guest' colspan='5'/>
+        <label name='ref' />
+        <field name='ref' xfill='0' xalign='0.0'/>
+        <label name='is_admitted'/>
+        <field name='is_admitted'/>
+        <newline />
+        <label name='gender' />
+        <field name='gender' />
+        <label name='age' />
+        <field name='age' />
+        <newline />
+        <label name='celphone' />
+        <field name='celphone' />
+    </group>
+</form>

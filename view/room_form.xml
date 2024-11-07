@@ -1,0 +1,21 @@
+<form>
+    <group col='2' colspan='4' id='attributes_room'>
+        <label name='room'  />
+        <field name='room' colspan='3'/>
+        <label name='type' />
+        <field name='type' />
+        <label name='room_number' />
+        <field name='room_number' />
+        <label name='price' />
+        <field name='price' />
+        <label name='state' />
+        <field name='state' />
+        <label name='max_guest' />
+        <field name='max_guest' />
+    </group>
+    <group col='1' colspan='4' id="button_room">
+        <button name="to_clean" icon="clean" />
+        <button name="free" icon="free" />
+        <button name="disabled" icon="disabled" />
+     </group>
+</form>

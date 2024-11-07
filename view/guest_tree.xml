@@ -1,0 +1,8 @@
+<tree>
+    <field name="ref"/>
+    <field name="guest"/>
+    <field name="gender"/>
+    <field name="age"/>
+    <field name="celphone"/>
+    <field name="is_admitted" expand='1'/>
+</tree>

@@ -1,0 +1,223 @@
+<tryton>
+    <data>
+        <!-- Add neew Icons -->
+        <record model="ir.ui.icon" id="hotel_icon">
+            <field name="name">hotel</field>
+            <field name="path">icons/hotel.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="clean_icon">
+            <field name="name">clean</field>
+            <field name="path">icons/clean.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="taken_icon">
+            <field name="name">taken</field>
+            <field name="path">icons/taken.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="free_icon">
+            <field name="name">free</field>
+            <field name="path">icons/free.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="disabled_icon">
+            <field name="name">disabled</field>
+            <field name="path">icons/disabled.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="open_service_icon">
+            <field name="name">open</field>
+            <field name="path">icons/open-service.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="closed_service_icon">
+            <field name="name">closed</field>
+            <field name="path">icons/closed-service.svg</field>
+        </record>
+        <!-- ir.ui.view -->
+        <record model="ir.ui.view" id="guest_view_form">
+            <field name="model">hotel.guest</field>
+            <field name="type">form</field>
+            <field name="name">guest_form</field>
+        </record>
+        <record model="ir.ui.view" id="guest_view_tree">
+            <field name="model">hotel.guest</field>
+            <field name="type">tree</field>
+            <field name="name">guest_tree</field>
+        </record>
+        <!-- Room -->
+        <record model="ir.ui.view" id="room_view_form">
+            <field name="model">hotel.room</field>
+            <field name="type">form</field>
+            <field name="name">room_form</field>
+        </record>
+        <record model="ir.ui.view" id="room_view_tree">
+            <field name="model">hotel.room</field>
+            <field name="type">tree</field>
+            <field name="name">room_tree</field>
+        </record>
+        <record model="ir.ui.view" id="reservations_view_form">
+            <field name="model">hotel.room.reservations</field>
+            <field name="type">form</field>
+            <field name="name">reservations_form</field>
+        </record>
+        <record model="ir.ui.view" id="reservations_view_tree">
+            <field name="model">hotel.room.reservations</field>
+            <field name="type">tree</field>
+            <field name="name">reservations_tree</field>
+        </record>
+        <record model="ir.ui.view" id="reservations_guest_view_tree">
+            <field name="model">hotel.room.reservations.guest</field>
+            <field name="type">tree</field>
+            <field name="name">reservations_guest_tree</field>
+        </record>
+        <!-- Create a menu entry for Guest -->
+        <record model="ir.action.act_window" id="act_guest_form">
+            <field name="name">Guest</field>
+            <field name="res_model">hotel.guest</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_guest_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="guest_view_tree"/>
+            <field name="act_window" ref="act_guest_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_guest_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="guest_view_form"/>
+            <field name="act_window" ref="act_guest_form"/>
+        </record>
+        <!-- Create a menu entry for Room -->
+        <record model="ir.action.act_window" id="act_room_form">
+            <field name="name">Rooms</field>
+            <field name="res_model">hotel.room</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_room_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="room_view_tree"/>
+            <field name="act_window" ref="act_room_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_room_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="room_view_form"/>
+            <field name="act_window" ref="act_room_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_room_form_domain_free">
+            <field name="name">Free</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'free')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_room_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_room_form_domain_taken">
+            <field name="name">Taken</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'taken')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_room_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_room_form_domain_to_clean">
+            <field name="name">To clean</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'to_clean')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_room_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_room_form_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="act_window" ref="act_room_form"/>
+        </record>
+        <!-- Create a menu entry for Reservations -->
+        <record model="ir.action.act_window" id="act_reservations_form">
+            <field name="name">Reservations</field>
+            <field name="res_model">hotel.room.reservations</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_reservations_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="reservations_view_tree"/>
+            <field name="act_window" ref="act_reservations_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="actreservations_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="reservations_view_form"/>
+            <field name="act_window" ref="act_reservations_form"/>
+        </record>
+        <!-- Buttons -->
+        <record model="ir.model.button" id="reservations_open_button">
+            <field name="name">open</field>
+            <field name="string">Open</field>
+            <field name="model" search="[('model', '=', 'hotel.room.reservations')]"/>
+        </record>
+        <record model="ir.model.button" id="reservations_closed_button">
+            <field name="name">closed</field>
+            <field name="string">Closed</field>
+            <field name="model" search="[('model', '=', 'hotel.room.reservations')]"/>
+        </record>
+            <!-- Room buttons -->
+        <record model="ir.model.button" id="room_to_clean_button">
+            <field name="name">to_clean</field>
+            <field name="string">To Clean</field>
+            <field name="model" search="[('model', '=', 'hotel.room')]"/>
+        </record>
+        <record model="ir.model.button" id="room_free_button">
+            <field name="name">free</field>
+            <field name="string">Free</field>
+            <field name="model" search="[('model', '=', 'hotel.room')]"/>
+        </record>
+        <record model="ir.model.button" id="room_disabled_button">
+            <field name="name">disabled</field>
+            <field name="string">Disabled</field>
+            <field name="model" search="[('model', '=', 'hotel.room')]"/>
+        </record>
+        <!-- Reservations pages -->
+        <record model="ir.action.act_window.domain" id="act_reservation_form_domain_draft">
+            <field name="name">Draft</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'draft')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_reservations_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_reservation_form_domain_open">
+            <field name="name">Open</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'open')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_reservations_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_reservation_form_domain_closed">
+            <field name="name">Closed</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain"
+                eval="[('state', '=', 'closed')]"
+                pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_reservations_form"/>
+        </record>
+        <menuitem
+            name="Hotel"
+            sequence="50"
+            id="menu_hotel"
+            icon="hotel" />
+        <menuitem
+            parent="menu_hotel"
+            action="act_guest_form"
+            sequence="10"
+            id="menu_guest_form"/>
+            <menuitem
+            parent="menu_hotel"
+            action="act_room_form"
+            sequence="20"
+            id="menu_room_form"/>
+            <menuitem
+            parent="menu_hotel"
+            action="act_reservations_form"
+            sequence="30"
+            id="menu_reservations_form"/>
+    </data>
+</tryton>

@@ -1,0 +1,9 @@
+<tree >
+    <field name='room' expand='1'/>
+    <field name='room_number' />
+    <field name='type' />
+    <field name='price' />
+    <field name='max_guest' />
+    <field name='state' />
+
+</tree>

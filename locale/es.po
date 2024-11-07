@@ -1,0 +1,163 @@
+msgctxt "model:ir.ui.menu,name:menu_hotel"
+msgid "Hotel"
+msgstr "Hotel"
+
+msgctxt "model:ir.ui.menu,name:menu_guest_form"
+msgid "Guest"
+msgstr "Huéspedes"
+
+msgctxt "model:ir.ui.menu,name:menu_room_form"
+msgid "Rooms"
+msgstr "Habitaciones"
+
+msgctxt "model:ir.ui.menu,name:menu_reservations_form"
+msgid "Reservations"
+msgstr "Reservaciones"
+
+msgctxt "field:hotel.guest,guest:"
+msgid "Guest"
+msgstr "Huesped"
+
+msgctxt "field:hotel.guest,is_admitted:"
+msgid "Admitted"
+msgstr "Admitido"
+
+msgctxt "field:hotel.guest,gender:"
+msgid "Gender"
+msgstr "Genero"
+
+msgctxt "selection:hotel.guest,gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:hotel.guest,gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:hotel.guest,gender:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "field:hotel.guest,age:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "view:hotel.guest:"
+msgid "Contact Mechanisms"
+msgstr "Mecanismo de Contacto"
+
+msgctxt "field:hotel.guest,celphone:"
+msgid "Celphone"
+msgstr "Celular"
+
+msgctxt "field:hotel.room,room:"
+msgid "Room"
+msgstr "Cuarto"
+
+msgctxt "field:hotel.room,type:"
+msgid "Room Type"
+msgstr "Tipo de Cuarto"
+
+msgctxt "field:hotel.room,room_number:"
+msgid "Room Number"
+msgstr "Número del Cuarto"
+
+msgctxt "field:hotel.room,price:"
+msgid "Price"
+msgstr "Precio"
+
+msgctxt "field:hotel.room,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:hotel.room,max_guest:"
+msgid "Max Guest"
+msgstr "Máximo de Huéspedes"
+
+msgctxt "selection:hotel.room,type:"
+msgid "Simple"
+msgstr "Simple"
+
+msgctxt "selection:hotel.room,type:"
+msgid "Matrimonial"
+msgstr "Matrimonial"
+
+msgctxt "selection:hotel.room,type:"
+msgid "Double"
+msgstr "Doble"
+
+msgctxt "selection:hotel.room,state:"
+msgid "Free"
+msgstr "Libre"
+
+msgctxt "selection:hotel.room,state:"
+msgid "Taken"
+msgstr "Ocupado"
+
+msgctxt "selection:hotel.room,state:"
+msgid "To Clean"
+msgstr "Para Limpiar"
+
+msgctxt "field:hotel.room.reservations,reserved_by:"
+msgid "Reserved by"
+msgstr "Reservado por"
+
+msgctxt "field:hotel.room.reservations,room:"
+msgid "Room"
+msgstr "Cuarto"
+
+msgctxt "field:hotel.room.reservations,price:"
+msgid "Price"
+msgstr "Precio"
+
+msgctxt "field:hotel.room.reservations,check_in:"
+msgid "Check in"
+msgstr "Ingreso"
+
+msgctxt "field:hotel.room.reservations,check_out:"
+msgid "Check out"
+msgstr "Salida"
+
+msgctxt "field:hotel.room.reservations,observations:"
+msgid "Observations"
+msgstr "Observaciones"
+
+msgctxt "field:hotel.room.reservations,guest:"
+msgid "Guests Line"
+msgstr "Huéspedes"
+
+msgctxt "field:hotel.room.reservations.guest,guest:"
+msgid "Guest"
+msgstr "Huésped"
+
+msgctxt "field:hotel.room.reservations,service:"
+msgid "Service"
+msgstr "Servicio"
+
+msgctxt "field:hotel.service,name:"
+msgid "Service"
+msgstr "Servicio"
+
+msgctxt "field:hotel.service,total_price:"
+msgid "Total"
+msgstr "Total"
+
+msgctxt "field:hotel.service,service_line:"
+msgid "Service Lines"
+msgstr "Línea de Servicios"
+
+msgctxt "field:hotel.service.line,product:"
+msgid "Product"
+msgstr "Producto"
+
+msgctxt "field:hotel.service.line,qty:"
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgctxt "field:hotel.service.line,unit_price:"
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+msgctxt "field:hotel.service.line,price:"
+msgid "Price"
+msgstr "Precio"
